@@ -1,4 +1,6 @@
-# Fantasy Football API
+Fantasty Football API
+
+Available Scripts
 
 `npm start`
 `npm test`
