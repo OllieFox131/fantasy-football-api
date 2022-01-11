@@ -26,6 +26,7 @@ const PlayerItem = ({ player, teamId }) => {
         <div className='card-back'>
           <h1>{player.web_name}</h1>
           <table>
+            <tbody>
             <tr>
               <td><strong>TPoints</strong></td>
               <td>{player.total_points}</td>
@@ -50,6 +51,7 @@ const PlayerItem = ({ player, teamId }) => {
               <td><strong>CSheets</strong></td>
               <td>{player.clean_sheets}</td>
             </tr>
+            </tbody>
           </table>
           {/* <ul>
             <li>

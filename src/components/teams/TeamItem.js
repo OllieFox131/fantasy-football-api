@@ -16,20 +16,26 @@ const TeamItem = ({ team }) => {
           </div>
           <div className='card-back'>
             <h1>{team.name}</h1>
-            <ul>
-              <li>
-                <strong>Id:</strong> {team.id}
-              </li>
-              <li>
-                <strong>Strength:</strong> {team.strength}
-              </li>
-              <li>
-                <strong>Strenght Overall Home:</strong> {team.strength_overall_home}
-              </li>
-              <li>
-                <strong>Strenght Overall Away:</strong> {team.strength_overall_away}
-              </li>
-            </ul>
+            <table>
+              <tbody>
+              <tr>
+                <td><strong>Id</strong></td>
+                <td>{team.id}</td>
+              </tr>
+              <tr>
+                <td><strong>Strength</strong></td>
+                <td>{team.strength}</td>
+              </tr>
+              <tr>
+                <td><strong>Strength Overall Home</strong></td>
+                <td>{team.strength_overall_home}</td>
+              </tr>
+              <tr>
+                <td><strong>Strenth Overall Away</strong></td>
+                <td>{team.strength_overall_away}</td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
