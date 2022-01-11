@@ -75,6 +75,7 @@ input[type='text'] {
 }
 
 .card {
+  text-align: center;
   cursor: pointer;
   background-color: transparent;
   height: 300px;
@@ -116,15 +117,18 @@ input[type='text'] {
 }
 
 .card-back {
-  background-color: #333;
+  background-color: transparent;
   color: white;
   padding: 20px;
   transform: rotateY(180deg);
 }
 
-.card li {
-  list-style: none;
-  padding-bottom: 10px;
+.card table, th, td {
+  margin: auto;
+  border: 1px solid white;
+  border-collapse: collapse;
+  font-size: medium;
+  width: 100%;
 }
 
 @media (max-width: 800px) {

@@ -20,8 +20,8 @@ const App = () => {
     const fetchItems = async () => {
       const result = await axios(`https://fantasy.premierleague.com/api/bootstrap-static/`)
       
-      console.log(result.data.teams[1])
-      console.log(result.data.elements[1])
+      console.log(result.data.teams[0])
+      console.log(result.data.elements[0])
 
       setTeams(result.data.teams)
       setPlayers(result.data.elements)
