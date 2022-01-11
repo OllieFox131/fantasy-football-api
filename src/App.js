@@ -20,6 +20,7 @@ const App = () => {
     const fetchItems = async () => {
       const result = await axios(`https://fantasy.premierleague.com/api/bootstrap-static/`)
       
+      console.log(result.data.teams[1])
       console.log(result.data.elements[1])
 
       setTeams(result.data.teams)
@@ -43,7 +44,7 @@ const App = () => {
       <Route path='/team/:id' element={
         <>
         <TinyTeamGrid isLoading={isLoading} teams={teams} />
-        <PlayerGrid isLoading={isLoading} players={players} />
+        <PlayerGrid isLoading={isLoading} teams={teams} players={players} />
         </>
       } />
       </Routes>
