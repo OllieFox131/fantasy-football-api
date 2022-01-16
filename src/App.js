@@ -1,15 +1,11 @@
-import './App.css'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import Header from './components/ui/Header'
-import Search from './components/ui/Search'
 import TeamGrid from './components/teams/TeamGrid'
-import TeamItem from './components/teams/TeamItem'
 import TinyTeamGrid from './components/teams/TinyTeamGrid'
-import TinyTeamItem from './components/teams/TinyTeamItem'
 import PlayerGrid from './components/players/PlayerGrid'
-import PlayerItem from './components/players/PlayerItem'
+import './index.css'
 
 const App = () => {
   const [teams, setTeams] = useState([])
@@ -33,7 +29,7 @@ const App = () => {
   
   return(
     <Router>
-    <div className="container">
+    <div className="bg-gradient-to-r from-slate-800 to-slate-900">
       <Header />
       <Routes>
       <Route path='' exact element={

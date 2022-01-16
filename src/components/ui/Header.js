@@ -6,8 +6,8 @@ const Header = () => {
         <Link to={{
             pathname: `/`,
           }}>
-        <header className='center'>
-            <img src={logo} alt="" />
+        <header>
+            <img className="m-auto p-10" src={logo} alt="" />
         </header>
         </Link>
     )

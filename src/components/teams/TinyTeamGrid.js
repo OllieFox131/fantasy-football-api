@@ -4,7 +4,7 @@ import Spinner from '../ui/Spinner'
 const TinyTeamGrid = ({ teams, isLoading }) => {
     return isLoading ? 
     <Spinner /> : 
-    <section className="tiny-cards">
+    <section className="grid grid-cols-10 xl:grid-cols-20 container m-auto">
         {teams.map(team => (
             <TinyTeamItem key={team.id} team={team}/>
         ))}

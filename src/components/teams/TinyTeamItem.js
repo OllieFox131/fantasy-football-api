@@ -9,12 +9,8 @@ const TinyTeamItem = ({ team }) => {
 
   return (
     <Link to={`/team/${team.id}`}>
-        <div className='tiny-card'>
-            <div className='tiny-card-inner'>
-                <div className='tiny-card-front'>
-                    <img src={image} alt='' />
-                </div>
-            </div>
+        <div>
+          <img id={team.code} className="w-100" src={image} alt='' />
         </div>
     </Link>
   )
