@@ -50,6 +50,18 @@
     @apply w-full;
 }
 
+.stat-card {
+    @apply w-full bg-gradient-to-r from-cyan-200 to-cyan-400 rounded-xl;
+}
+
+.stat-header {
+    @apply m-auto text-xl text-center font-medium;
+}
+
+.stat-main {
+    @apply m-auto text-xl text-center font-normal;
+}
+
 .header {
     @apply m-auto p-10;
 }
