@@ -1,20 +1,11 @@
-import { Link } from 'react-router-dom'
-
-const PlayerItem = ({ player, teamId }) => {
+const PlayerItem = ({ player }) => {
   var playerDomain = 'https://resources.premierleague.com/premierleague/photos/players/110x140/p'
   var playerNum = player.photo.split('.')[0]
   var playerEnd = '.png'
 
   var playerImage = playerDomain.concat(playerNum).concat(playerEnd)
 
-  var teamDomain = 'https://resources.premierleague.com/premierleague/badges/t'
-  var teamNum = teamId
-  var teamEnd = '.png'
-
-  var teamImage = teamDomain.concat(teamNum).concat(teamEnd)
-
   return (
-    <Link to={`/player/${player.id}`}>
     <div className="player-card">
       <div>
         <p className="player-card-header">{player.web_name}</p>
@@ -22,10 +13,6 @@ const PlayerItem = ({ player, teamId }) => {
       <div>
         <img className="player-card-image"
           src={playerImage}
-          onError={({ currentTarget }) => {
-            currentTarget.onerror = null; // prevents looping
-            currentTarget.src=`${teamImage}`;
-          }}
           alt="player"
         />
       </div>
@@ -44,7 +31,6 @@ const PlayerItem = ({ player, teamId }) => {
           <p className="footer-stat">{player.clean_sheets}</p>
       </div>
     </div>
-    </Link>
   )
 }
 

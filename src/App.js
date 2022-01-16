@@ -5,6 +5,7 @@ import Header from './components/ui/Header'
 import TeamGrid from './components/teams/TeamGrid'
 import TinyTeamGrid from './components/teams/TinyTeamGrid'
 import PlayerGrid from './components/players/PlayerGrid'
+import StatGrid from './components/player/StatGrid'
 import './index.css'
 
 const App = () => {
@@ -16,8 +17,8 @@ const App = () => {
     const fetchItems = async () => {
       const result = await axios(`https://fantasy.premierleague.com/api/bootstrap-static/`)
       
-      console.log(result.data.teams[0])
-      console.log(result.data.elements[0])
+      // console.log(result.data.teams[0])
+      // console.log(result.data.elements[0])
 
       setTeams(result.data.teams)
       setPlayers(result.data.elements)
@@ -41,6 +42,11 @@ const App = () => {
         <>
         <TinyTeamGrid isLoading={isLoading} teams={teams} />
         <PlayerGrid isLoading={isLoading} teams={teams} players={players} />
+        </>
+      } />
+      <Route path='/player/:id' element={
+        <>
+        <StatGrid isLoading={isLoading} teams={teams} players={players} />
         </>
       } />
       </Routes>
