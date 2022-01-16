@@ -7,7 +7,7 @@ const Header = () => {
             pathname: `/`,
           }}>
         <header>
-            <img className="m-auto p-10" src={logo} alt="" />
+            <img className="header" src={logo} alt="" />
         </header>
         </Link>
     )

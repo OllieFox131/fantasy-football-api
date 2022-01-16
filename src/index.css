@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.player-card-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 container m-auto;
+}
+
+.player-card {
+    @apply m-10 bg-gradient-to-r from-cyan-200 to-cyan-400 rounded-xl;
+}
+
+.player-card-header {
+    @apply p-2 text-xl text-center font-medium;
+}
+
+.player-card-image {
+    @apply rounded-full bg-blue-400 w-full;
+}
+
+.player-card-footer {
+    @apply p-2 grid grid-cols-3 container text-center text-xs;
+}
+
+.footer-stat {
+    @apply p-1 m-auto;
+}
+
+.team-grid {
+    @apply grid grid-cols-4 lg:grid-cols-5 container m-auto;
+}
+
+.team-card {
+    @apply m-10 bg-gradient-to-r from-cyan-200 to-cyan-400 rounded-xl;
+}
+
+.team-image {
+    @apply w-full p-2 md:p-5;
+}
+
+.tiny-team-grid {
+    @apply grid grid-cols-10 lg:grid-cols-20 container m-auto;
+}
+
+.tiny-team-card {
+    @apply p-2 md:p-4 lg:p-1 xl:p-2 2xl:p-3
+}
+
+.tiny-team-image {
+    @apply w-full;
+}
+
+.header {
+    @apply m-auto p-10;
+}
+
+body {
+    height: 100vw;
+    @apply bg-gradient-to-r from-slate-800 to-slate-900
+}

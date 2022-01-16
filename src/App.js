@@ -29,7 +29,7 @@ const App = () => {
   
   return(
     <Router>
-    <div className="bg-gradient-to-r from-slate-800 to-slate-900">
+    <div>
       <Header />
       <Routes>
       <Route path='' exact element={

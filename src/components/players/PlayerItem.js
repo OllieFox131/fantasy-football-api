@@ -12,12 +12,12 @@ const PlayerItem = ({ player, teamId }) => {
   var teamImage = teamDomain.concat(teamNum).concat(teamEnd)
 
   return (
-    <div className="m-10 bg-gradient-to-r from-cyan-200 to-cyan-400 rounded-xl">
+    <div className="player-card">
       <div>
-        <p className="p-2 text-xl text-center font-medium">{player.web_name}</p>
+        <p className="player-card-header">{player.web_name}</p>
       </div>
       <div>
-        <img className="w-full"
+        <img className="player-card-image"
           src={playerImage}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
@@ -26,19 +26,19 @@ const PlayerItem = ({ player, teamId }) => {
           alt="player"
         />
       </div>
-      <div className="p-2 grid grid-cols-3 container text-center text-xs">
-          <p className="p-1 m-auto col-span-2">Total Points</p>
-          <p className="p-1 m-auto">{player.total_points}</p>
-          <p className="p-1 m-auto col-span-2">Points per Game</p>
-          <p className="p-1 m-auto">{player.points_per_game}</p>
-          <p className="p-1 m-auto col-span-2">Bonus Point Score</p>
-          <p className="p-1 m-auto">{player.bps}</p>
-          <p className="p-1 m-auto col-span-2">Goals</p>
-          <p className="p-1 m-auto">{player.goals_scored}</p>
-          <p className="p-1 m-auto col-span-2">Assists</p>
-          <p className="p-1 m-auto">{player.assists}</p>
-          <p className="p-1 m-auto col-span-2">Clean Sheets</p>
-          <p className="p-1 m-auto">{player.clean_sheets}</p>
+      <div className="player-card-footer">
+          <p className="footer-stat col-span-2">Total Points</p>
+          <p className="footer-stat">{player.total_points}</p>
+          <p className="footer-stat col-span-2">Points per Game</p>
+          <p className="footer-stat">{player.points_per_game}</p>
+          <p className="footer-stat col-span-2">Bonus Point Score</p>
+          <p className="footer-stat">{player.bps}</p>
+          <p className="footer-stat col-span-2">Goals</p>
+          <p className="footer-stat">{player.goals_scored}</p>
+          <p className="footer-stat col-span-2">Assists</p>
+          <p className="footer-stat">{player.assists}</p>
+          <p className="footer-stat col-span-2">Clean Sheets</p>
+          <p className="footer-stat">{player.clean_sheets}</p>
       </div>
     </div>
   )

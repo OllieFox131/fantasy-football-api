@@ -16,7 +16,7 @@ const PlayerGrid = ({ players, teams, isLoading }) => {
 
     return isLoading ? 
     <Spinner /> : 
-    <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 container m-auto">
+    <section className="player-card-grid">
         {teamPlayers.map(player => (
             <PlayerItem key={player.id} player={player} teamId={team.code}/>
         ))}
