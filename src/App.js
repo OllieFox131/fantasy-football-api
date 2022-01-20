@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import Header from './components/ui/Header'
 import TeamGrid from './components/teams/TeamGrid'
 import TinyTeamGrid from './components/teams/TinyTeamGrid'
 import PlayerGrid from './components/players/PlayerGrid'
 import StatGrid from './components/player/StatGrid'
+import Spinner from './components/ui/Spinner'
 import './index.css'
 
 const App = () => {
@@ -16,9 +17,6 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios(`https://fantasy.premierleague.com/api/bootstrap-static/`)
-      
-      // console.log(result.data.teams[0])
-      // console.log(result.data.elements[0])
 
       setTeams(result.data.teams)
       setPlayers(result.data.elements)
@@ -27,6 +25,10 @@ const App = () => {
 
     fetchItems()
   }, [])
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   
   return(
     <Router>
